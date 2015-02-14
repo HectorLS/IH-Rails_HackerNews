@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 		@post = Post.new post_params
 		if @post.save
 			flash[:notice] = "Post created successfully"
-			redirect_to home_path
+			redirect_to posts_path
 		else
 			render 'new'
 		end
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 		@post = Post.find params[:id]
 		if @post.update_attributes post_params
 			flash[:notice] = "Post updated successfully"
-			redirect_to home_path
+			redirect_to posts_path
 		else
 			render 'edit'
 		end
@@ -40,6 +40,6 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:postname, :password)
+		params.require(:post).permit(:title, :text, :post_type, :source)
 	end
 end
