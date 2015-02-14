@@ -1,1 +1,13 @@
-FUUUUUUUCKING GIT
+<% @posts.each do |post| %>
+	<ul>
+		<li>
+			<div class="post">
+				<h2 class="post-title"><%= post.title %></h2>
+				<p class="post-text"><%= post.text %></p>
+				<span class="post-type"><%= post.post_type %></span>
+				<span class="post-score"><%= post.score %></span>
+				<span class="post-source"><%= post.source %></span>		
+			</div>
+		</li>
+	</ul>
+<% end %>
