@@ -14,5 +14,5 @@
 
 
 # Ignore database users
-config/database.yml
+/config/database.yml
 
