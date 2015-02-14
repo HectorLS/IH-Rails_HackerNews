@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 	
   get '/' => 'site#home', as: :home
   resources :users
-  resources :comments do
-    resources :posts
+  resources :posts do
+    resources :comments
   end
 
 end
