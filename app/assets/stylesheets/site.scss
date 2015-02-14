@@ -1,21 +1,50 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$basecolor: rgb(255, 102, 0);
-$black: rgb(0,0,0);
+$basecolor: rgb(255,102,0);
+$black: 		rgb(0,0,0);
+$white:			rgb(255,255,255);
+$textcolor: rgb(128, 128, 128);   //soft grey
+$bgcolor: 	rgb(246,246,239);
 
+* {
+	box-sizing: border-box;
+	font-family: 'Verdana, Geneva, sans-serif';
+}
+
+body {
+	padding: 0 5%;
+}
 
 
 .navbar-top {
 	background-color: $basecolor;
-	color: $black;
+}
+
+.menu-list {
+	padding: 0;
+	margin-bottom: 0;
 }
 
 .menu-list li {
 	display: inline-block;
-	padding: .5%;
+	padding: .5% .3%;
+}
+
+.menu-list li a {
+	text-decoration: none;
+	color: $black;
+	&:active {
+		color: $white;
+	}
 }
 
 .company-name {
 	font-weight: bold;
+}
+
+
+.main-content {
+	background-color: $bgcolor;
+	padding: 5% .8%;
 }

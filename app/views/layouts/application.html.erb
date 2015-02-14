@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>HackerNews</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<nav class="navbar-top">
-		<ul class="menu-list">
-			<li><%= link_to('<span class="link logo">LOGO</span>', posts_path, class: "menu-list_link") %><span class="link logo"></span></li>
-			<li><%= link_to('<span class="link company-name strong">Hacker News</span>', posts_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">new</span>', posts_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">comments</span>', post_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">show</span>', posts_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">ask</span>', posts_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">jobs</span>', posts_path, class: "menu-list_link") %></li>
-			<li><%= link_to('<span class="link">submit</span>', new_user_path, class: "menu-list_link") %></li>
-		</ul>
-	</nav>
+	<head>
+	  <title>HackerNews</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 
+	<!-- ==================
+						$NAV
+	 ===================-->
 
-	<section class="main-content">
-		<%= yield %>
-		whatever
-	</section>
-</body>
+		<nav class="navbar-top">
+			<ul class="menu-list">
+				<li>
+					<a href="//www.ycombinator.com/">
+						<span class="link logo">LOGO</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link company-name strong">Hacker News</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link">new</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link">comments</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link">now</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link">ask</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= posts_path %>">
+						<span class="link">jobs</span>
+					</a>
+				</li>
+				<li>
+					<a href="<%= new_user_path %>">
+						<span class="link">submit</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+<!-- ==================
+					$MAIN CONTENT
+ ===================-->
+		<section class="main-content">
+			<%= yield %>
+		</section>
+	</body>
 </html>
