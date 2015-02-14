@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav class="navbar-top">
+		<ul class="menu-list">
+			<li><%= link_to('<span class="link logo">LOGO</span>', path, class: "menu-list_link") %><span class="link logo"></span></li>
+			<li><%= link_to('<span class="link company-name strong">Hacker News</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">new</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">comments</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">show</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">ask</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">jobs</span>', path, class: "menu-list_link") %></li>
+			<li><%= link_to('<span class="link">submit</span>', path, class: "menu-list_link") %></li>
+		</ul>
+	</nav>
 
-<%= yield %>
 
+	<section class="main-content">
+		<%= yield %>
+	</section>
 </body>
 </html>
