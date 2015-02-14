@@ -12,4 +12,7 @@
 !/log/.keep
 /tmp
 
+
+# Ignore database users
 config/database.yml
+
